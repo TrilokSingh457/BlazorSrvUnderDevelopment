@@ -1,0 +1,13 @@
+﻿
+<h3>User</h3>
+
+<p>
+    <b>Name:</b> <i><span>@Contacts.Name</span></i><br />
+    <b>Email:</b> <i><span>@Contacts.Email</span></i><br />
+    <b>Address</b> <i><span>@Contacts.Address</span></i><br />
+</p>
+
+@code {
+    [Parameter]
+    public Models.Contacts Contacts { get; set; }
+}

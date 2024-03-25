@@ -1,0 +1,47 @@
+﻿@page "/User"
+@using Models
+@using BlazorSrvUnderDevelopment.Pages.RazorComponents
+
+@foreach (var item in Contacts)
+{
+    <ContactsComponent Contacts=item> </ContactsComponent>
+}
+
+@code {
+    private List<Contacts> Contacts;
+
+    protected override void OnInitialized()
+    {
+        base.OnInitialized();
+
+        Contacts = new List<Contacts>
+        {
+            new Contacts
+            {
+                Name = "Martin",
+                Email = "Martin@gmail.com",
+                Address = "Ottawa, ON, Canada"
+               
+            },
+
+            new Contacts
+            {
+                Name = "Alan",
+                Email = "Alan@gmail.com",
+                Address = "Ottawa, ON, Canada"
+
+            }, 
+
+            new Contacts
+            {
+                Name = "Jeff",
+                Email = "Jeff@gmail.com",
+                Address = "Ottawa, ON, Canada"
+
+            }
+
+
+        };
+
+    }
+}
